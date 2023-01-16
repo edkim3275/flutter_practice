@@ -1,16 +1,12 @@
 # flutter_practice
 
-A new Flutter project.
+## 1일차_box design
 
-## Getting Started
+- 레이아웃
+  - Scaffold() 위젯 - appBar, body, bottomNavigatoinBar
+  - Row, Column 위젯 - `MainAxisAlignment`, `CrossAxisAlignment`
+  - Container vs. SizedBox
+  - 박스꾸미기 - margin, padding, decoration
+  - 박스위치정렬 - Align
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![image-20230116235159182](README.assets/image-20230116235159182.png)
