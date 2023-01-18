@@ -20,3 +20,16 @@
 - Custom Widget
 
   <img src="README.assets/image-20230117221316884.png" alt="image-20230117221316884" style="zoom: 67%;" />
+
+## Day3_GetX
+
+- Routing Navigator vs. GetX
+
+  - 페이지 이동 `Get.to(Home())`, `Get.toNamed('/path')`
+  - 뒤로가기 `Get.back()`
+  - 히스토리 지우면서 이동 `Get.offAll(Home())`, `Get.offNamed('/path')`, `Get.offAllNamed('/path')`
+  - arguments전달 `Get.to(Home(), arguments: '전달하려는 arguments')`
+  - argunents전달받기 `Get.arguments`
+  - 동적 parameter전달 `Get.toNamed('/user/46541?name=name&age=65')`
+
+  <img src="README.assets/image-20230118230928102.png" alt="image-20230118230928102" style="zoom: 80%;" />

@@ -1,4 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_practice/src/home.dart';
+import 'package:flutter_practice/src/practice3/named/first.dart';
+import 'package:flutter_practice/src/practice3/named/next.dart';
+import 'package:flutter_practice/src/practice3/named/second.dart';
+import 'package:flutter_practice/src/practice3/named/third.dart';
+import 'package:flutter_practice/src/practice3/named/user.dart';
+import 'package:get/get.dart';
 
 void main() {
   runApp(const MyApp());
@@ -8,45 +15,21 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        home: Scaffold(
-            appBar: AppBar(
-              backgroundColor: Colors.white,
-              title: Container(
-                child: Row(
-                  children: [
-                    Text(
-                      '연락처',
-                      style: TextStyle(
-                          fontWeight: FontWeight.w700, color: Colors.black),
-                    ),
-                    Icon(
-                      Icons.keyboard_arrow_down_rounded,
-                      color: Colors.black,
-                    )
-                  ],
-                ),
-              ),
-              actions: [
-                IconButton(
-                    onPressed: () {},
-                    icon:
-                        Icon(Icons.search, color: Colors.black54, size: 24.0)),
-                Container(
-                    margin: EdgeInsets.only(right: 10.0),
-                    child: IconButton(
-                      onPressed: () {},
-                      icon: Icon(Icons.menu, color: Colors.black54, size: 24.0),
-                    )),
-              ],
-            ),
-            body: ListView(
-              padding: EdgeInsets.all(10),
-              children: [PeopleListItem(), PeopleListItem(), PeopleListItem()],
-            ),
-            bottomNavigationBar: BottomAppBar(
-              child: CustomButtomNavigationBar(),
-            )));
+    return GetMaterialApp(
+      home: Home(),
+      initialRoute: '/',
+      // routes: {
+      //   '/': (context) => Home(),
+      // },
+      getPages: [
+        GetPage(name: '/', page: () => Home()),
+        GetPage(name: '/first', page: () => FirstNamedPage()),
+        GetPage(name: '/second', page: () => SecondNamedPage()),
+        GetPage(name: '/third', page: () => ThirdNamedPage()),
+        GetPage(name: '/next', page: () => NextPage()),
+        GetPage(name: '/user/:uid', page: () => UserPage()),
+      ],
+    );
   }
 }
 
@@ -157,6 +140,53 @@ class Practice1 extends StatelessWidget {
                 ],
               ))),
     );
+  }
+}
+
+class Practice2 extends StatelessWidget {
+  const Practice2({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            appBar: AppBar(
+              backgroundColor: Colors.white,
+              title: Container(
+                child: Row(
+                  children: [
+                    Text(
+                      '연락처',
+                      style: TextStyle(
+                          fontWeight: FontWeight.w700, color: Colors.black),
+                    ),
+                    Icon(
+                      Icons.keyboard_arrow_down_rounded,
+                      color: Colors.black,
+                    )
+                  ],
+                ),
+              ),
+              actions: [
+                IconButton(
+                    onPressed: () {},
+                    icon:
+                        Icon(Icons.search, color: Colors.black54, size: 24.0)),
+                Container(
+                    margin: EdgeInsets.only(right: 10.0),
+                    child: IconButton(
+                      onPressed: () {},
+                      icon: Icon(Icons.menu, color: Colors.black54, size: 24.0),
+                    )),
+              ],
+            ),
+            body: ListView(
+              padding: EdgeInsets.all(10),
+              children: [PeopleListItem(), PeopleListItem(), PeopleListItem()],
+            ),
+            bottomNavigationBar: BottomAppBar(
+              child: CustomButtomNavigationBar(),
+            )));
   }
 }
 
