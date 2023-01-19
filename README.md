@@ -33,3 +33,15 @@
   - 동적 parameter전달 `Get.toNamed('/user/46541?name=name&age=65')`
 
   <img src="README.assets/image-20230118230928102.png" alt="image-20230118230928102" style="zoom: 80%;" />
+
+## Day4_GetX
+
+- simple state manage(단순상태관리) 
+
+- reactive state manage(반응형 상태관리)
+
+- dependency injection(의존성 주입)
+
+  <img src="README.assets/image-20230119204732439.png" alt="image-20230119204732439" style="zoom: 80%;" />
+
+  

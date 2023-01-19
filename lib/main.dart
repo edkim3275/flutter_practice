@@ -5,6 +5,7 @@ import 'package:flutter_practice/src/practice3/named/next.dart';
 import 'package:flutter_practice/src/practice3/named/second.dart';
 import 'package:flutter_practice/src/practice3/named/third.dart';
 import 'package:flutter_practice/src/practice3/named/user.dart';
+import 'package:flutter_practice/src/practice3/simple_state_manage_page.dart';
 import 'package:get/get.dart';
 
 void main() {
@@ -28,6 +29,7 @@ class MyApp extends StatelessWidget {
         GetPage(name: '/third', page: () => ThirdNamedPage()),
         GetPage(name: '/next', page: () => NextPage()),
         GetPage(name: '/user/:uid', page: () => UserPage()),
+        GetPage(name: '/simple', page: () => SimpleStateManagePage()),
       ],
     );
   }
